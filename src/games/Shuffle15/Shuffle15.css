@@ -1,21 +1,50 @@
+
+.shuffle-box .shuffle-header {
+    height: 3rem;
+}
+.shuffle-box .new-game{
+    cursor: pointer;
+    /* background-color: transparent;
+    border: none;
+    font-size: 20px; */
+    float: left;
+}
+
+.shuffle-box .moves {
+    background-color: transparent;
+    /* border: none; */
+    font-size: 20px;
+    color: #CC5DE8;;
+    font-weight: bolder;
+    font-family: Pacifico, cursive;
+    cursor: pointer;
+    /* float: right; */
+
+}
+
+.new-game::before {
+    content: url('/public/restart-32.png');
+}
+
+
 .shuffle-container {
-    width: 100%;
+    margin-left: 6rem;
+    width: fit-content;
     height: 100%;
     display: grid;
     flex-direction: row;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    max-width: 500px;
 }
 
 .shuffle-square {
-
-    width: 95%;
+    cursor: pointer;
+    width: 100px;
     height: 100px;
-    background-color: rgb(61, 41, 99);
-    margin: 5px 0px;
-    border: 1px solid black;
+    background-color: #d080e4;
+    margin: 5px;
+    /* border: 1px solid black; */
     align-items: center;
     align-content: center;
     border-radius: 15px;
@@ -39,7 +68,7 @@
 }
 
 .shuffle-value {
-    color: aqua;
+    color: rgb(252, 254, 254);
     font-weight: bolder;
     font-size: 50px;
     font-family: Pacifico, cursive;

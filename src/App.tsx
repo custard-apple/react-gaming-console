@@ -9,11 +9,8 @@ function App() {
 
   return (
     <>
-      <div>
-       
-      <h1>Select you Game & Play</h1>
+      <h3>Select Your Game & Play</h3>
       <AppRoutes />
-      </div>
     </>
   )
 }

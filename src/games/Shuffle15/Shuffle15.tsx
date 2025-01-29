@@ -20,6 +20,7 @@ const Shuffle15 = () => {
     const [time, setTime] = useState(0);
 
     const reload = () => {
+        setMoves(0);
         const numbers = shuffleNumbers(initialNumbers);
         setShuffledArray(numbers);
     }
@@ -77,9 +78,12 @@ const Shuffle15 = () => {
     }, [shuffledArray]);
 
     return (
-        <>
-            <button onClick={reload}>New Game</button>
-            <button>Moves <span>{moves}</span></button>
+        <div className="shuffle-box">
+            <div className='shuffle-header'>
+            <span className='new-game' onClick={reload}></span>
+            <span className='moves'>Moves <span>{moves}</span></span>
+            </div>
+           
             <div className="shuffle-container">
                 {
                     shuffledArray.map((value, index) => {
@@ -97,7 +101,7 @@ const Shuffle15 = () => {
                 }
             </div>
            {/* {isShowModal && <Modal content={modalContent}/>} */}
-        </>
+        </div>
     )
 }
 
